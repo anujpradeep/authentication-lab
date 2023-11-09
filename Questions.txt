@@ -17,6 +17,9 @@ Token:
     - Token is stored by the client
     - Security is much better compared to sessions. Tokens can have a set time on them, which means they can be short, or long depending on what the user needs.
 
+
+Token has better security as you dont have to send the username and password with each request. It is also stateless.
+
 Question 4:
 After clicking Login with google
     - Redirects to google Oauth2.0 authorization server, includes permissions that bitbucket needs, and a URI to redirect after successful authentication
