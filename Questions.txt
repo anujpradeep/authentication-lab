@@ -1,0 +1,29 @@
+Question 1:
+By default, its session-based authentication. 
+Typically maintained by the browser cookies to store and manage sessions.
+
+Question 2:
+-a or --auth is used for basic authentication.
+
+Question 3:
+Differences between session vs token
+Session:
+    - Stateful
+    - session is saved on the server/cookies.
+    - Security is generally secure, but can be hijacked if not properly protected
+
+Token:
+    - Stateless
+    - Token is stored by the client
+    - Security is much better compared to sessions. Tokens can have a set time on them, which means they can be short, or long depending on what the user needs.
+
+Question 4:
+After clicking Login with google
+    - Redirects to google Oauth2.0 authorization server, includes permissions that bitbucket needs, and a URI to redirect after successful authentication
+    - User needs to grant permissions, if agreed, authenticated with Google and grants permission for bitbucket to access their google account data
+        Google will also generate a one time authorization code and sends it to the redirect URI
+    - Bitbucket will receive the code, and exchange the code for access to Google OAuth server, where they can refresh the tokens
+    - Bitbucket gains access and has a session on the platform.
+
+Question 5:
+    https://github.com/anujpradeep/authentication-lab
